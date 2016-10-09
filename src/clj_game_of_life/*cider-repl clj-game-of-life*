@@ -1,0 +1,27 @@
+clj-game-of-life.core> (print-grid (tick (tick (tick arr))))
+(nil nil nil nil)
+ 0000
+ 0110
+ 0110
+ 0000
+clj-game-of-life.core> (print-grid (tick (tick (tick arr))))
+NullPointerException   clojure.lang.Numbers.ops (Numbers.java:1013)
+clj-game-of-life.core> (print-grid (tick (tick (tick arr))))
+(nil nil nil nil)
+ 0000
+ 0110
+ 0110
+ 0000
+clj-game-of-life.core> 
+#object[clojure.lang.Namespace 0x4d5fbdd8 "clj-game-of-life.core-test"]
+clj-game-of-life.core-test> 
+#object[clojure.lang.Namespace 0x4d5fbdd8 "clj-game-of-life.core-test"]
+clj-game-of-life.core-test> (still-live-test)
+nil
+clj-game-of-life.core-test> (test still-live-test)
+:no-test
+clj-game-of-life.core-test> (test)
+ArityException Wrong number of args (0) passed to: core/test  clojure.lang.AFn.throwArity (AFn.java:429)
+clj-game-of-life.core-test> (test still-live-test)
+:no-test
+clj-game-of-life.core-test> 
