@@ -1,27 +1,157 @@
-clj-game-of-life.core> (print-grid (tick (tick (tick arr))))
-(nil nil nil nil)
- 0000
- 0110
- 0110
- 0000
-clj-game-of-life.core> (print-grid (tick (tick (tick arr))))
-NullPointerException   clojure.lang.Numbers.ops (Numbers.java:1013)
-clj-game-of-life.core> (print-grid (tick (tick (tick arr))))
-(nil nil nil nil)
- 0000
- 0110
- 0110
- 0000
-clj-game-of-life.core> 
-#object[clojure.lang.Namespace 0x4d5fbdd8 "clj-game-of-life.core-test"]
-clj-game-of-life.core-test> 
-#object[clojure.lang.Namespace 0x4d5fbdd8 "clj-game-of-life.core-test"]
-clj-game-of-life.core-test> (still-live-test)
-nil
-clj-game-of-life.core-test> (test still-live-test)
-:no-test
-clj-game-of-life.core-test> (test)
-ArityException Wrong number of args (0) passed to: core/test  clojure.lang.AFn.throwArity (AFn.java:429)
-clj-game-of-life.core-test> (test still-live-test)
-:no-test
+clj-game-of-life.core-test> (print-grid (tick (tick (tick (tick glider)))))
+(nil nil nil nil nil nil nil nil nil nil)
+ 0000000000
+ 0101000000
+ 0011000000
+ 0010000000
+ 0000000000
+ 0000000000
+ 0000000000
+ 0000000000
+ 0000000000
+ 0000000000
+clj-game-of-life.core-test> (print-grid (tick-n glider 10))
+(nil nil nil nil nil nil nil nil nil nil)
+ 0000000000
+ 0000000000
+ 0001000000
+ 0000110000
+ 0001100000
+ 0000000000
+ 0000000000
+ 0000000000
+ 0000000000
+ 0000000000
+clj-game-of-life.core-test> (print-grid (tick-n glider 40))
+(nil nil nil nil nil nil nil nil nil nil)
+ 0000000000
+ 0000000000
+ 0000000000
+ 0000000000
+ 0000000000
+ 0000000000
+ 0000000000
+ 0000000000
+ 0000000011
+ 0000000011
+clj-game-of-life.core-test> (print-grid (tick-n glider 39))
+(nil nil nil nil nil nil nil nil nil nil)
+ 0000000000
+ 0000000000
+ 0000000000
+ 0000000000
+ 0000000000
+ 0000000000
+ 0000000000
+ 0000000000
+ 0000000011
+ 0000000011
+clj-game-of-life.core-test> (print-grid (tick-n glider 30))
+(nil nil nil nil nil nil nil nil nil nil)
+ 0000000000
+ 0000000000
+ 0000000000
+ 0000000000
+ 0000000000
+ 0000000000
+ 0000000000
+ 0000000010
+ 0000000001
+ 0000000011
+clj-game-of-life.core-test> (print-grid (tick-n glider 31))
+(nil nil nil nil nil nil nil nil nil nil)
+ 0000000000
+ 0000000000
+ 0000000000
+ 0000000000
+ 0000000000
+ 0000000000
+ 0000000000
+ 0000000000
+ 0000000001
+ 0000000011
+clj-game-of-life.core-test> (print-grid (tick-n glider 32))
+(nil nil nil nil nil nil nil nil nil nil)
+ 0000000000
+ 0000000000
+ 0000000000
+ 0000000000
+ 0000000000
+ 0000000000
+ 0000000000
+ 0000000000
+ 0000000011
+ 0000000011
+clj-game-of-life.core-test> (print-grid (tick-n glider 33))
+(nil nil nil nil nil nil nil nil nil nil)
+ 0000000000
+ 0000000000
+ 0000000000
+ 0000000000
+ 0000000000
+ 0000000000
+ 0000000000
+ 0000000000
+ 0000000011
+ 0000000011
+clj-game-of-life.core-test> (print-grid (tick-n glider 34))
+(nil nil nil nil nil nil nil nil nil nil)
+ 0000000000
+ 0000000000
+ 0000000000
+ 0000000000
+ 0000000000
+ 0000000000
+ 0000000000
+ 0000000000
+ 0000000011
+ 0000000011
+clj-game-of-life.core-test> (print-grid (tick-n glider 31))
+(nil nil nil nil nil nil nil nil nil nil)
+ 0000000000
+ 0000000000
+ 0000000000
+ 0000000000
+ 0000000000
+ 0000000000
+ 0000000000
+ 0000000000
+ 0000000001
+ 0000000011
+clj-game-of-life.core-test> (print-grid (tick-n glider 31))
+(nil nil nil nil nil nil nil nil nil nil)
+ 0000000000
+ 0000000000
+ 0000000000
+ 0000000000
+ 0000000000
+ 0000000000
+ 0000000000
+ 0000000000
+ 0000000001
+ 0000000011
+clj-game-of-life.core-test> (print-grid (tick-n glider 25))
+(nil nil nil nil nil nil nil nil nil nil)
+ 0000000000
+ 0000000000
+ 0000000000
+ 0000000000
+ 0000000000
+ 0000000000
+ 0000000010
+ 0000001010
+ 0000000110
+ 0000000000
+clj-game-of-life.core-test> (print-grid (tick-n glider 28))
+(nil nil nil nil nil nil nil nil nil nil)
+ 0000000000
+ 0000000000
+ 0000000000
+ 0000000000
+ 0000000000
+ 0000000000
+ 0000000000
+ 0000000101
+ 0000000011
+ 0000000010
 clj-game-of-life.core-test> 

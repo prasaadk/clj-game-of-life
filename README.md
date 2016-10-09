@@ -1,32 +1,6 @@
 # clj-game-of-life
 
-FIXME: description
-
-## Installation
-
-Download from http://example.com/FIXME.
-
-## Usage
-
-FIXME: explanation
-
-    $ java -jar clj-game-of-life-0.1.0-standalone.jar [args]
-
-## Options
-
-FIXME: listing of options this app accepts.
-
-## Examples
-
-...
-
-### Bugs
-
-...
-
-### Any Other Sections
-### That You Think
-### Might be Useful
+This is [Conway's game of life](https://en.wikipedia.org/wiki/Conway%27s_Game_of_Life) implementation in clojure.
 
 ## License
 
